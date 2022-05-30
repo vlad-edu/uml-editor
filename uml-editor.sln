@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmlEditor", "src\UmlEditor\UmlEditor.csproj", "{BACA7DAD-C8A6-49A6-B481-6F1672B7542C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63FDF4C0-E7A5-4151-A30E-F2129CCB25EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9922A83B-EBAF-48F1-8B19-00E9CCC8464F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.globalconfig = .globalconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		global.json = global.json
+		nuget.config = nuget.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BACA7DAD-C8A6-49A6-B481-6F1672B7542C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACA7DAD-C8A6-49A6-B481-6F1672B7542C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACA7DAD-C8A6-49A6-B481-6F1672B7542C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACA7DAD-C8A6-49A6-B481-6F1672B7542C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BACA7DAD-C8A6-49A6-B481-6F1672B7542C} = {63FDF4C0-E7A5-4151-A30E-F2129CCB25EB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43838471-1644-4D11-9D60-5E999D038C39}
+	EndGlobalSection
+EndGlobal
