@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using UmlEditor.EventArguments;
 using UmlEditor.Geometry;
 using UmlEditor.Hitboxes;
@@ -11,7 +12,6 @@ namespace UmlEditor.Relationships
 {
     public class RelationshipSegment //: IRenderableNode
     {
-        public string Name { get; set; }
         public Vector Position
         {
             get => SegmentStart.StartPoint;
@@ -21,8 +21,8 @@ namespace UmlEditor.Relationships
                 CreateHitboxes();
             }
         }
-        public float Width { get; set; }
-        public float Height { get; set; }
+
+        public int Width { get; set; } = 7;
         public List<IHitbox> TriggerAreas { get; set; } = new List<IHitbox>();
         public EventHandler<ResizeEventArgs> OnResize { get; set; }
         private List<RectangleRenderElement> DebugRectangles = new();
@@ -49,10 +49,22 @@ namespace UmlEditor.Relationships
             }
         }
 
-        public RelationshipSegment(Vector position, Vector joint, Vector anchor)
+        public RelationshipSegment(Vector position, Vector joint, Vector anchor, bool isTarget = false)
         {
-            SegmentStart = new LineRenderElement(position, joint, 1, Color.White);
-            SegmentEnd = new LineRenderElement(joint, anchor, 1, Color.White);
+            SegmentStart = new LineRenderElement(position, joint, 1, Color.White)
+            {
+                Width = Width,
+                EndCap = LineCap.Round
+            };
+            if (isTarget) SegmentStart.StartCap = LineCap.ArrowAnchor;
+
+
+            SegmentEnd = new LineRenderElement(joint, anchor, 1, Color.White)
+            {
+                Width = Width,
+                StartCap = LineCap.Round,
+                EndCap = LineCap.Round
+            };
             CreateHitboxes();
         }
         public void Render(Renderer renderer)

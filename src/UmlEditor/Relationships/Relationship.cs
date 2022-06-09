@@ -35,7 +35,7 @@ namespace UmlEditor.Relationships
             TargetNode = target;
             List<Vector> vectors = GetLineVectors();
             Origin = new RelationshipSegment(vectors[0], vectors[3], vectors[2]);
-            Target = new RelationshipSegment(vectors[1], vectors[4], vectors[2]);
+            Target = new RelationshipSegment(vectors[1], vectors[4], vectors[2], true);
             OriginNode.OnPositionChanged += OnPositionChanged;
             TargetNode.OnPositionChanged += OnPositionChanged;
             OnOptionsHide += HideOptions;
