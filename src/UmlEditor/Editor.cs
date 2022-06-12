@@ -21,18 +21,18 @@ namespace UmlEditor
     {
         public Project Project;
         private Renderer Renderer;
-        private List<INode> Children = new();
+        public List<INode> Children = new();
         private IFocusableNode FocusedNode;
         private BasicContainerNode OptionsPrefab;
         private BasicContainerNode OptionsMenu;
         public bool isFocused = false;
         private Relationship focusedRelationship;
-        private RelationshipManager RelationshipManager = new();
+        public RelationshipManager RelationshipManager = new();
         private ClassDiagramNode Dragged;
-        private Relationship CurrentRelationship;
         private Vector DraggingVector;
         private Vector LastMousePos;
         public string Directory = "C:\\Testing";
+
         public Editor(PictureBox renderTarget, string ProjectName)
         {
             Project = new Project(ProjectName);

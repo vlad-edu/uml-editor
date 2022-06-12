@@ -25,8 +25,8 @@ namespace UmlEditor.Relationships
         public BasicContainerNode OptionsMenu { get; set; }
         public bool isFocused { get; set; }
 
-        private ClassDiagramNode OriginNode;
-        private ClassDiagramNode TargetNode;
+        public ClassDiagramNode OriginNode { get; set; }
+        public ClassDiagramNode TargetNode { get; set; }
 
         //Sketchy but needed
         public Relationship(ClassDiagramNode origin, ClassDiagramNode target) : base(new BasicNodeStructure(Vector.Zero, 0,0), RectangleRenderElementStyle.Default)

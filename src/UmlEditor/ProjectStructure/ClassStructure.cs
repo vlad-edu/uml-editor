@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UmlEditor.Enums;
 using UmlEditor.Geometry;
 
@@ -6,6 +7,7 @@ namespace UmlEditor.ProjectStructure
 {
     public class ClassStructure : BasicCodeStructure
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
         public List<MethodStructure> Methods { get; set; } = new List<MethodStructure>();
         public List<PropertyStructure> Properties { get; set; } = new List<PropertyStructure>();
 

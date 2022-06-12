@@ -10,6 +10,7 @@ namespace UmlEditor.Relationships
         public bool IsCreating = false;
 
         private ClassDiagramNode node = null;
+
         public ClassDiagramNode SelectedNode
         {
             get => node;
@@ -25,10 +26,12 @@ namespace UmlEditor.Relationships
                 }
             }
         }
+
         public void CreateRelationship(ClassDiagramNode from, ClassDiagramNode to)
         {
             Relationships.Add(new Relationship(from, to));
         }
+
         public void Render(Renderer renderer)
         {
             Relationships.ForEach(x => x.Render(renderer));

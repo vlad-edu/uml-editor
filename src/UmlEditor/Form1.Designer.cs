@@ -38,8 +38,9 @@
             // 
             this.Plane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Plane.Location = new System.Drawing.Point(0, 0);
+            this.Plane.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Plane.Name = "Plane";
-            this.Plane.Size = new System.Drawing.Size(1584, 861);
+            this.Plane.Size = new System.Drawing.Size(1848, 993);
             this.Plane.TabIndex = 0;
             this.Plane.TabStop = false;
             // 
@@ -47,19 +48,21 @@
             // 
             this.ControlerTab.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControlerTab.Location = new System.Drawing.Point(0, 0);
+            this.ControlerTab.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ControlerTab.Name = "ControlerTab";
-            this.ControlerTab.Size = new System.Drawing.Size(1584, 25);
+            this.ControlerTab.Size = new System.Drawing.Size(1848, 29);
             this.ControlerTab.TabIndex = 1;
             this.ControlerTab.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.ClientSize = new System.Drawing.Size(1848, 993);
             this.Controls.Add(this.ControlerTab);
             this.Controls.Add(this.Plane);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
